@@ -19,6 +19,7 @@ let mixer;
 let isMobile = window.matchMedia('(max-width: 992px)').matches;
 let canvas = document.querySelector('.experience-canvas');
 const loaderWrapper = document.getElementById('loader-wrapper');
+let rainbowLight = 0xffffff
 let clipNames = [
   'fan_rotation',
   'fan_rotation.001',
@@ -29,8 +30,9 @@ let clipNames = [
 let projects = [
   {
     image: 'https://sushigames.org/favicon.ico',
-    url: 'https://sushigames.org/',
+    url: 'https://sushigames.org/'
   }
+  
 ];
 let aboutCameraPos = {
   x: 0.12,
@@ -179,7 +181,7 @@ gltfLoader.load(
         );
         bookTexture.flipY = false;
         child.material = new THREE.MeshStandardMaterial({
-          color: 0xffffff,
+          color: rainbowLight,
           map: bookTexture,
         });
       }
@@ -294,6 +296,14 @@ function animate() {
   if (mixer) {
     mixer.update(clock.getDelta());
   }
+
+  rainbowLight = 0xff0000
+  rainbowLight = 0xff0000
+  rainbowLight = 0xff0000
+  rainbowLight = 0x00ff00
+  rainbowLight = 0x00ff00
+  rainbowLight = 0x00ff00
+
   renderer.render(scene, camera);
   // stats.update();
 }
