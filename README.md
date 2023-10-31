@@ -71,11 +71,15 @@ This is an example of how to list things you need to use the software and how to
 * git
   ```sh
   git clone https://github.com/sushiguy35/sushiguy.net.git
-  ```
+
+* npm
+  ```sh
+  cd sushiguy.net
+
 * npm
   ```sh
   npm install 
-  ```
+
 * npm
 * ```sh
   npm run dev
@@ -85,6 +89,4 @@ _Heres how to use my website via a web browser._
 
 Just go to sushiguy.net
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>t 
